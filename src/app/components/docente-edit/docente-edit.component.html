@@ -1,0 +1,26 @@
+<mat-card *ngIf="docente">
+    <mat-card-header>
+      <mat-card-title>Editar Docente: {{ docente.nombre }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="actualizarDocente()">
+  
+        <!-- Campo para Nombre del Docente -->
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Nombre del Docente</mat-label>
+          <input matInput [(ngModel)]="docente.nombre" name="nombre" required />
+        </mat-form-field>
+  
+        <!-- Campo para Legajo -->
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Legajo</mat-label>
+          <input matInput type="number" [(ngModel)]="docente.legajo" name="legajo" required />
+        </mat-form-field>
+  
+        <!-- Botones de Guardar y Cancelar -->
+        <button mat-raised-button color="primary" type="submit">Actualizar Docente</button>
+        <button mat-button (click)="router.navigate(['/docentes'])">Cancelar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

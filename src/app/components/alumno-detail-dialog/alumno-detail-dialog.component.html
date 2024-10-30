@@ -1,0 +1,13 @@
+<mat-card *ngIf="alumno">
+    <mat-card-header>
+      <mat-card-title>{{ alumno.nombre }}</mat-card-title>
+      <button mat-icon-button class="close-button" (click)="cerrar()" aria-label="Cerrar">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Fecha de Nacimiento:</strong> {{ alumno.fechaNacimiento | date }}</p>
+      <!-- Agrega más detalles del alumno si es necesario -->
+    </mat-card-content>
+  </mat-card>
+  

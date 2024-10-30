@@ -1,0 +1,10 @@
+.curso-detail-card {
+    position: relative; /* Permite posicionar elementos hijos */
+  }
+  
+  .close-button {
+    position: absolute; /* Permite posicionar el botón en relación al mat-card */
+    top: 8px; /* Ajusta la distancia desde la parte superior */
+    right: 8px; /* Ajusta la distancia desde la derecha */
+  }
+  

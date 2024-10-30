@@ -1,0 +1,26 @@
+<mat-card *ngIf="tema">
+    <mat-card-header>
+      <mat-card-title>Editar Tema: {{ tema.nombre }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="actualizarTema()">
+        
+        <!-- Campo para Nombre del Tema -->
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Nombre del Tema</mat-label>
+          <input matInput [(ngModel)]="tema.nombre" name="nombre" required />
+        </mat-form-field>
+        
+        <!-- Campo para Descripción -->
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Descripción</mat-label>
+          <textarea matInput [(ngModel)]="tema.descripcion" name="descripcion" required></textarea>
+        </mat-form-field>
+  
+        <!-- Botones de Guardar y Cancelar -->
+        <button mat-raised-button color="primary" type="submit">Actualizar Tema</button>
+        <button mat-button (click)="router.navigate(['/temas'])">Cancelar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
